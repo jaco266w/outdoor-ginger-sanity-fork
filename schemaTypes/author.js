@@ -27,6 +27,10 @@ export const author = defineType({
         }),
       ],
     }),
+    defineField({
+      type: "string",
+      name: "instagram",
+    }),
   ],
 });
 

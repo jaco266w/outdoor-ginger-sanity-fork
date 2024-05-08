@@ -9,6 +9,10 @@ export const post = defineType({
       name: "title",
     }),
     defineField({
+      type: "string",
+      name: "subtitle",
+    }),
+    defineField({
       type: "slug",
       name: "slug",
       options: { source: "title" },
