@@ -4,6 +4,7 @@ import { category } from "./category";
 import { mainImage } from "./mainImage";
 import { post } from "./post";
 import { product } from "./product";
+import { sponsor } from "./sponsor";
 
 export const schemaTypes = [
   address,
@@ -12,4 +13,5 @@ export const schemaTypes = [
   mainImage,
   post,
   product,
+  sponsor,
 ];
