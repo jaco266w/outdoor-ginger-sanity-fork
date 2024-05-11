@@ -9,16 +9,16 @@ export const sponsor = defineType({
             name: "Sponsor_Name",
         }),
         defineField({
-            type: "string",
-            name: "Sponsor_Website",
-            description: "Please include the full URL (e.g. https://www.example.com)",
-            validation: (Rule) => Rule.uri({allowRelative: false})
+          type: "string",
+          name: "Sponsor_Website",
+          description: "Please include the full URL (e.g. https://www.example.com)",
+          validation: (Rule) => Rule.required().uri({allowRelative: false})
         }),
         defineField({
           type: "image",
           name: "Sponsor_Logo",
           description: "Please only upload white logos with transparent backgrounds.(PNG/WEBP file only)",
-          validation: (Rule) => Rule.custom((fieldValue, context) => {
+          validation: (Rule) => Rule.required().custom((fieldValue, context) => {
             if (fieldValue && fieldValue.asset) {
               const assetRefParts = fieldValue.asset._ref.split('-');
               const extensionPart = assetRefParts[assetRefParts.length - 1];
