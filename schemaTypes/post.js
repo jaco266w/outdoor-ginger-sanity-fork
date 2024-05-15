@@ -58,6 +58,21 @@ export const post = defineType({
         }),
       ],
     }),
+    defineField({
+      type: "string",
+      name: "Youtube_Short_URL",
+      description: "Please include the full URL (e.g. https://youtu.be/abcdefghijk)",
+      validation: (Rule) => Rule.uri().custom((url) => {
+        if (url && !url.startsWith('https://www.youtube.com/shorts/')) {
+          return 'URL must start with "https://www.youtube.com/shorts/"';
+        }
+        return true;
+      })
+    }),
+    defineField({
+      type: "string",
+      name: "Youtube_Short_Title",
+    }),
   ],
 });
 
