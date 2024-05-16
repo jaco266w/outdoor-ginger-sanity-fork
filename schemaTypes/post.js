@@ -73,6 +73,14 @@ export const post = defineType({
       type: "string",
       name: "Youtube_Short_Title",
     }),
+    defineField({
+      type: "string",
+      name: "Latitude",
+    }),
+    defineField({
+      type: "string",
+      name: "Longitude",
+    }),
   ],
 });
 
