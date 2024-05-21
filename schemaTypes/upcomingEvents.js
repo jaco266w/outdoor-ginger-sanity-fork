@@ -37,11 +37,11 @@ export const upcomingEvents = defineType({
           ],
           options: {hotspot: true},
         }),
-        defineField({
-          type: 'string',
-          name: 'howToParticipate',
-        }),
       ],
+    }),
+    defineField({
+      type: 'string',
+      name: 'howToParticipate',
     }),
   ],
 })
