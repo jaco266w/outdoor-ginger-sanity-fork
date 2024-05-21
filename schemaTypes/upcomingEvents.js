@@ -5,6 +5,16 @@ export const upcomingEvents = defineType({
   name: 'upcomingEvents',
   fields: [
     defineField({
+      type: 'array',
+      name: 'images',
+      of: [
+        defineArrayMember({
+          type: 'image',
+          options: {hotspot: true},
+        }),
+      ],
+    }),
+    defineField({
       type: 'string',
       name: 'title',
     }),
