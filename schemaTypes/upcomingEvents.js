@@ -7,12 +7,7 @@ export const upcomingEvents = defineType({
     defineField({
       type: 'array',
       name: 'images',
-      of: [
-        defineArrayMember({
-          type: 'image',
-          options: {hotspot: true},
-        }),
-      ],
+      of: [{type: 'string'}],
     }),
     defineField({
       type: 'string',
@@ -37,16 +32,16 @@ export const upcomingEvents = defineType({
         defineArrayMember({
           type: 'block',
         }),
-        defineArrayMember({
-          type: 'image',
-          fields: [
-            {
-              type: 'string',
-              name: 'caption',
-            },
-          ],
-          options: {hotspot: true},
-        }),
+        // defineArrayMember({
+        //   type: 'image',
+        //   fields: [
+        //     {
+        //       type: 'string',
+        //       name: 'caption',
+        //     },
+        //   ],
+        //   options: {hotspot: true},
+        // }),
       ],
     }),
     defineField({
