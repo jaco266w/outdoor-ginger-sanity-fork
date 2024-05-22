@@ -5,9 +5,8 @@ export const upcomingEvents = defineType({
   name: 'upcomingEvents',
   fields: [
     defineField({
-      type: 'array',
+      type: 'image',
       name: 'images',
-      of: [{type: 'string'}],
     }),
     defineField({
       type: 'string',
