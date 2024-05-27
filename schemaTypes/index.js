@@ -9,6 +9,7 @@ import {testimonials} from './testimonials'
 import {whatPeopleSay} from './whatPeopleSay'
 import {upcomingEvents} from './upcomingEvents'
 import {donation} from './donation'
+import {previousEvents} from './previousEvents'
 
 export const schemaTypes = [
   address,
@@ -22,4 +23,5 @@ export const schemaTypes = [
   whatPeopleSay,
   upcomingEvents,
   donation,
+  previousEvents,
 ]
