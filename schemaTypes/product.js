@@ -42,6 +42,10 @@ export const product = defineType({
       name: "price",
     }),
     defineField({
+      type: "number",
+      name: "memberPrice",
+    }),
+    defineField({
       type: "array",
       name: "images",
       of: [
