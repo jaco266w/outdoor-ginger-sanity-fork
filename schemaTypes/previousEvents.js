@@ -1,4 +1,4 @@
-import {defineType, defineField} from 'sanity'
+import {defineType, defineField, defineArrayMember} from 'sanity'
 
 export const previousEvents = defineType({
   type: 'document',
@@ -18,7 +18,34 @@ export const previousEvents = defineType({
     }),
     defineField({
       type: 'string',
+      name: 'time',
+    }),
+    defineField({
+      type: 'string',
       name: 'location',
+    }),
+    defineField({
+      type: 'array',
+      name: 'content',
+      of: [
+        defineArrayMember({
+          type: 'block',
+        }),
+        // defineArrayMember({
+        //   type: 'image',
+        //   fields: [
+        //     {
+        //       type: 'string',
+        //       name: 'caption',
+        //     },
+        //   ],
+        //   options: {hotspot: true},
+        // }),
+      ],
+    }),
+    defineField({
+      type: 'string',
+      name: 'howToParticipate',
     }),
   ],
 })
