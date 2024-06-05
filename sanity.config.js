@@ -3,9 +3,10 @@ import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
 import { schemaTypes } from './schemaTypes'
 
-export default defineConfig({
+export default defineConfig([{
   name: 'default',
-  title: 'Outdoor Ginger',
+  title: 'Outdoor Ginger - Production',
+  basePath: '/production',
 
   projectId: 'aq20tlwi',
   dataset: 'production',
@@ -15,4 +16,16 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
-})
+},
+{
+  name: 'fork',
+  title: 'Outdoor Ginger - Fork',
+  basePath: '/fork',
+  projectId: 'aq20tlwi',
+  dataset: 'fork',
+  plugins: [structureTool(), visionTool()],
+  schema: {
+    types: schemaTypes,
+  },
+}
+])
