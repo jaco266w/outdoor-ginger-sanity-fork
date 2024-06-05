@@ -2,6 +2,7 @@ import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
 import { schemaTypes } from './schemaTypes'
+import { forkSchemaTypes } from './forkSchemaTypes'
 
 export default defineConfig([{
   name: 'default',
@@ -25,7 +26,7 @@ export default defineConfig([{
   dataset: 'fork',
   plugins: [structureTool(), visionTool()],
   schema: {
-    types: schemaTypes,
+    types: forkSchemaTypes,
   },
 }
 ])
